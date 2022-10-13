@@ -284,10 +284,10 @@ h2 {
   overflow: hidden;
 }
 #work_1 {
-  background-image: url(images/work_a_1.jpg);
+  background-image: url(images/work_a_1.gif);
 }
 #work_2 {
-  background-image: url(images/work_a_2.jpg);
+  background-image: url(images/work_a_2.gif);
 }
 .work_image {
   background-size: cover;
