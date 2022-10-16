@@ -38,42 +38,39 @@ hover_blue_1.forEach((el) =>
 
 //!   animation that changes (Sporo Wody) next to my name
 
-const littleSporoWody = document.querySelector("#title_sporo");
+// const littleSporoWody = document.querySelector("#title_sporo");
 
-littleSporoWody.addEventListener("mouseover", (event) => {
-  event.target.classList.toggle("text_blue");
-});
-
-// ?  function that changes Kurkiewicz to sporo wody
-
-const KurToSpor = document.querySelector(".hover_blue_2");
-
-KurToSpor.addEventListener("mouseover", (event) => {
-  event.target.innerHTML = "Sporo Wody";
-});
+// littleSporoWody.addEventListener("mouseover", (event) => {
+//   event.target.classList.toggle("text_blue");
+// });
 
 // !  function that changes different words
 
-const imgToIdeas = document.querySelector(".hover_3");
+// const KurToSpor = document.querySelector(".hover_blue_2");
 
-imgToIdeas.addEventListener("mouseover", (event) => {
-  event.target.innerHTML = "ideas";
-});
-const soundToMem = document.querySelector(".hover_4");
+// KurToSpor.addEventListener("mouseover", (event) => {
+//   event.target.innerHTML = "Sporo Wody";
+// });
+// const imgToIdeas = document.querySelector(".hover_3");
 
-soundToMem.addEventListener("mouseover", (event) => {
-  event.target.innerHTML = "memories";
-});
-const interToInspir = document.querySelector(".hover_5");
+// imgToIdeas.addEventListener("mouseover", (event) => {
+//   event.target.innerHTML = "ideas";
+// });
+// const soundToMem = document.querySelector(".hover_4");
 
-interToInspir.addEventListener("mouseover", (event) => {
-  event.target.innerHTML = "inspirations";
-});
-const instToFears = document.querySelector(".hover_6");
+// soundToMem.addEventListener("mouseover", (event) => {
+//   event.target.innerHTML = "memories";
+// });
+// const interToInspir = document.querySelector(".hover_5");
 
-instToFears.addEventListener("mouseover", (event) => {
-  event.target.innerHTML = "fears";
-});
+// interToInspir.addEventListener("mouseover", (event) => {
+//   event.target.innerHTML = "inspirations";
+// });
+// const instToFears = document.querySelector(".hover_6");
+
+// instToFears.addEventListener("mouseover", (event) => {
+//   event.target.innerHTML = "fears";
+// });
 
 //? function that starts on the landing page
 
@@ -275,6 +272,13 @@ inView(
 
 //! function that adds blue shadow to the header
 
+const header = document.querySelector("header");
+scroll(({ y }) => {
+  header.style.textShadow = `${y.progress.toFixed(1) * 4}px ${
+    y.progress.toFixed(1) * 4
+  }px var(--color-blue)`;
+});
+
 //! function that hides the logo from the landing page
 const hero = document.querySelector(".latest_work");
 const logo = document.querySelector(".header_logo");
@@ -298,9 +302,15 @@ scroll(
   hideSC
 );
 
-// const topBlur = document.querySelector("#header_blur");
-// scroll(({ y }) => {
-//   topBlur.style.boxShadow = `#fff 0px -20px 150px ${
-//     y.progress.toFixed(2) * 120
-//   }px`;
-// });
+const buttImg = document.querySelectorAll(".button_image");
+
+buttImg.forEach((el) =>
+  el.addEventListener("mouseover", (event) => {
+    event.target.classList.toggle("blackWhite");
+  })
+);
+buttImg.forEach((el) =>
+  el.addEventListener("mouseleave", (event) => {
+    event.target.classList.toggle("blackWhite");
+  })
+);
