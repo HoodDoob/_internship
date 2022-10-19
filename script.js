@@ -1,18 +1,23 @@
+// loading screen
+document.addEventListener("DOMContentLoaded", loadRemove);
+function loadRemove() {
+  document.querySelector("#loadScreen").classList.add("hidden");
+}
 // Making pictures black and white on hover
 import { inView, animate, scroll } from "https://cdn.skypack.dev/motion";
 
 const work_1 = document.querySelectorAll(".work_image");
 
-work_1.forEach((el) =>
-  el.addEventListener("mouseover", (event) => {
-    event.target.classList.toggle("blackWhite");
-  })
-);
-work_1.forEach((el) =>
-  el.addEventListener("mouseleave", (event) => {
-    event.target.classList.toggle("blackWhite");
-  })
-);
+// work_1.forEach((el) =>
+//   el.addEventListener("mouseover", (event) => {
+//     event.target.classList.toggle("blackWhite");
+//   })
+// );
+// work_1.forEach((el) =>
+//   el.addEventListener("mouseleave", (event) => {
+//     event.target.classList.toggle("blackWhite");
+//   })
+// );
 
 //  animation that opens and closes burger menu
 
@@ -302,15 +307,17 @@ scroll(
   hideSC
 );
 
+// Making buttons black and white on hover
+
 const buttImg = document.querySelectorAll(".button_image");
 
-buttImg.forEach((el) =>
-  el.addEventListener("mouseover", (event) => {
-    event.target.classList.toggle("blackWhite");
-  })
-);
-buttImg.forEach((el) =>
-  el.addEventListener("mouseleave", (event) => {
-    event.target.classList.toggle("blackWhite");
-  })
-);
+// buttImg.forEach((el) =>
+//   el.addEventListener("mouseover", (event) => {
+//     event.target.classList.toggle("blackWhite");
+//   })
+// );
+// buttImg.forEach((el) =>
+//   el.addEventListener("mouseleave", (event) => {
+//     event.target.classList.toggle("blackWhite");
+//   })
+// );
