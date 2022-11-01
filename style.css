@@ -987,7 +987,7 @@ p {
     margin-top: 7%;
   }
   #wrapper_more {
-    height: 15%;
+    height: 10%;
   }
   .header_logo {
     font-size: 2.5vw;
@@ -1037,6 +1037,16 @@ p {
   }
   .bottom_wr {
     font-size: 20px;
+  }
+}
+@media screen and (min-aspect-ratio: 19/15) and (max-height: 650px) {
+  #hero {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  #about p {
+    font-size: 30px;
   }
 }
 
